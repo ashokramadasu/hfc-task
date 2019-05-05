@@ -7,7 +7,9 @@ let express = require('express'),
     app = express(),
     NodeGeocoder = require('node-geocoder'),
     tj = require('togeojson'),
+    bodyParser = require('body-parser'),
     fs = require('fs'),
+    cors = require('cors'),
     _ = require('underscore'),
     config = require('./config'),
     port = config.port,
@@ -17,12 +19,14 @@ let express = require('express'),
     DOMParser = require('xmldom').DOMParser,
     kml = new DOMParser().parseFromString(fs.readFileSync(config.fileName, 'utf8'));
 
-
+    app.use(bodyParser.urlencoded({'extended': 'true'})); 
+    app.use(bodyParser.json());
+    app.use(cors()); 
 /*
 * Formatting xml data into JSON Array format ================================================
 */
 let converted = tj.kml(kml);
-let minValid = 2;
+// let minValid = 2;
 // json contains formatted data(cleaned from kml file)
 let json = [];
 converted.features.forEach((k) => {
