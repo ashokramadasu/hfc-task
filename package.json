@@ -1,0 +1,19 @@
+{
+  "name": "instarem-task",
+  "version": "0.0.1",
+  "description": "Battle rest apis using Express and Mongoose.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashok",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.10.8",
+    "node-geocoder": "^3.22.0",
+    "query-parser": "0.0.1",
+    "togeojson": "^0.16.0",
+    "underscore": "^1.9.1"
+  }
+}
