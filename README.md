@@ -9,7 +9,8 @@ find NearBuy Outlets REST API using NodeJs, Express and Geocoder.
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/ashokramadasu/hfc-task`
-2. Install the application: `cd hfc-task && npm install`
+2. Install the backend application: `cd hfc-task && npm install`
+3. Install the frontend application: `cd vue && npm install`
 3. Place your own  apiKey(google maps or opencage) in `config.js`
 4. Start the server:  `npm start` or `node app.js`
 
